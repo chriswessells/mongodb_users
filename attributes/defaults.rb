@@ -1,0 +1,5 @@
+default['mongodb']['host'] = 'localhost'
+default['mongodb']['port'] = '27017'
+default['mongodb']['admin']['user'] = 'admin'
+default['mongodb']['admin']['password'] = 'admin'
+default['mongodb']['admin']['database'] = 'admin'

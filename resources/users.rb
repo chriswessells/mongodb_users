@@ -14,4 +14,9 @@ end
 
 action :create do
   Chef::Log.info "Creating a user #{users}"
+  client = Mongo::Client.new()
+  client.database.users.update(@new_resource.users,
+                                   :password => @new_resource.password,
+                                   :roles => @new_resource.roles,
+                                   :database => @new_resource.database)
 end
