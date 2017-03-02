@@ -2,10 +2,10 @@ use_inline_resources if defined?(use_inline_resources)
 
 default_action :create
 
-property :users, kind_of: String, name_property: true
-property :database, kind_of: String, required: true
-property :password, kind_of: String, required: true
-property :roles, kind_of: Array
+attribute :users, kind_of: String, name_property: true
+attribute :database, kind_of: String, required: true
+attributue :password, kind_of: String, required: true
+attribu :roles, kind_of: Array
 
 def initialize(*args)
   super
