@@ -11,8 +11,7 @@ branches:
 before_script:
   - bundle install
 script:
-  - foodcritic .
-  - rubocop
+  - bundle exec rubocop
   - bundle exec rspec
 env:
   - CHEF_VERSION=master
