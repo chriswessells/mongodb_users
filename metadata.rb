@@ -8,4 +8,5 @@ version '0.1.0'
 issues_url 'https://github.com/chriswessells/mongodb_users/issues'
 source_url 'https://github.com/chriswessells/mongodb_users'
 
+depends 'mongodb3'
 gem 'mongo'
