@@ -1,7 +1,9 @@
 source 'https://rubygems.org'
 
-gem 'test-kitchen'
+gem 'berkshelf'
+gem 'chefspec'
 gem 'kitchen-vagrant'
 gem 'mongo'
-gem 'berkshelf'
 gem 'rake'
+gem 'rspec'
+gem 'test-kitchen'
