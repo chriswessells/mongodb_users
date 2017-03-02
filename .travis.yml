@@ -1,7 +1,6 @@
 language: ruby
 rvm:
 - 2.3.1
-install: true
 gemfile:
   - Gemfile
 branches:
@@ -9,4 +8,6 @@ branches:
     - master
     - develop
 before_script:
-  - bundle exec berks
+  - bundle install
+script:
+  - rspec
