@@ -14,13 +14,26 @@ end
 
 action :create do
   Chef::Log.info "Creating a user #{users}"
-  client = Mongo::Client.new(
-    'mongodb://localhost:27017',
-    database: 'admin',
-    connect: :direct
-  )
-  client.database.users.update(@new_resource.users,
+  client = mongo_client
+  begin
+    client.database.users.update(@new_resource.users,
                                    password: @new_resource.password,
                                    roles: @new_resource.roles,
                                    database: @new_resource.database)
+  rescue => err
+    Chef::Log.fatal "Could not add the user #{err}"
+  end
+end
+
+def mongo_client
+  begin
+    client = Mongo::Client.new(
+      'mongodb://localhost:27017',
+      database: 'admin',
+      connect: :direct
+    )
+  rescue => err
+    Chef::Log.fatal "Could not connect to the database #{err}"
+  end
+  client
 end
