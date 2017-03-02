@@ -4,11 +4,8 @@
 #
 # Copyright:: 2017, The Authors, All Rights Reserved.
 
-chef_require 'mongo'
-require 'mongo'
-
-users node['mongodb']['admin']['user'] do
+mongodb_users_add node['mongodb']['admin']['user'] do
   password node['mongodb']['admin']['password']
   database node['mongodb']['admin']['database']
-    action :create
+  action :create
 end
