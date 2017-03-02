@@ -4,8 +4,8 @@ default_action :create
 
 attribute :users, kind_of: String, name_property: true
 attribute :database, kind_of: String, required: true
-attributue :password, kind_of: String, required: true
-attribu :roles, kind_of: Array
+attribute :password, kind_of: String, required: true
+attribute :roles, kind_of: Array
 
 def initialize(*args)
   super
