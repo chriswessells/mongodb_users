@@ -1,0 +1,25 @@
+AllCops:
+  Exclude:
+    - 'Berksfile'
+    - 'Thorfile'
+    - 'Vagrantfile'
+    - 'Gemfile'
+    - 'metadata.rb'
+
+AlignParameters:
+  Enabled: false
+
+Encoding:
+  Enabled: false
+
+LineLength:
+  Max: 200
+
+AsciiComments:
+  Enabled: false
+
+MethodLength:
+  Max: 18
+
+Style/FileName:
+  Enabled: false
