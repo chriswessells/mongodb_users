@@ -1,6 +1,6 @@
 name 'mongodb_users'
-maintainer 'The Authors'
-maintainer_email 'you@example.com'
+maintainer 'Chris Wessells'
+maintainer_email 'cwessells@silvervue.com'
 license 'all_rights'
 description 'Installs/Configures mongodb_users'
 long_description 'Installs/Configures mongodb_users'
