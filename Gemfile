@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'berkshelf'
+gem 'berkshelf', '4.3.5'
 gem 'chefspec'
 gem 'kitchen-vagrant'
 gem 'mongo'
